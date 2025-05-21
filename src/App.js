@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import { GlobalStyles } from './styles/GlobalStyles';
@@ -6,15 +6,11 @@ import { useTheme } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Hero from './components/Hero';
-import { Highlights } from './components/Highlights';
-import Mission from './components/Mission';
-import Gallery from './components/Gallery';
-import Footer from './components/Footer';
 import styled from 'styled-components';
 import Team from './pages/Team';
 import Gallery from './pages/Gallery';
 import Events from './pages/Events';
+import Home from './pages/Home'; // Import the Home component
 
 function AppContent() {
   const { theme } = useTheme();
@@ -30,21 +26,18 @@ function AppContent() {
   return (
     <HomePage theme={theme} isDarkTheme={theme.isDarkTheme}>
       <GlobalStyles theme={theme} />
-      <Router>
+      <Router basename="/Optimus">
         <div className="App">
           <Navbar />
           <Routes>
+            <Route path="/" element={<Home />} /> {/* Add route for Home page */}
             <Route path="/team" element={<Team />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/events" element={<Events />} />
           </Routes>
         </div>
       </Router>
-      <Hero />
-      <Highlights />
-      <Mission />
-      <Gallery />
-      <Footer />
+      {/* Removed components rendered outside Router */}
     </HomePage>
   );
 }
