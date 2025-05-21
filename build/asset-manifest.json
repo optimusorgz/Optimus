@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Optimus/static/css/main.545885f4.css",
-    "main.js": "/Optimus/static/js/main.448580c6.js",
+    "main.js": "/Optimus/static/js/main.86023540.js",
     "static/media/main1.jpg": "/Optimus/static/media/main1.e3bebd4b4019e324af05.jpg",
     "static/media/3334896.jpg": "/Optimus/static/media/3334896.5b5ba9e7caedc1f6275a.jpg",
     "static/media/IMG_5766.JPG": "/Optimus/static/media/IMG_5766.514db4eb3af84153365c.JPG",
@@ -43,10 +43,10 @@
     "static/media/download (3).jpeg": "/Optimus/static/media/download (3).e6db2b5bfdd4ae970b87.jpeg",
     "index.html": "/Optimus/index.html",
     "main.545885f4.css.map": "/Optimus/static/css/main.545885f4.css.map",
-    "main.448580c6.js.map": "/Optimus/static/js/main.448580c6.js.map"
+    "main.86023540.js.map": "/Optimus/static/js/main.86023540.js.map"
   },
   "entrypoints": [
     "static/css/main.545885f4.css",
-    "static/js/main.448580c6.js"
+    "static/js/main.86023540.js"
   ]
 }

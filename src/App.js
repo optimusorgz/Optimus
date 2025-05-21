@@ -32,7 +32,7 @@ function AppContent() {
       <GlobalStyles theme={theme} />
       <Navbar />
       <Routes>
-        <Route path="/" element={
+        <Route index element={
           <>
             <Hero />
             <Highlights />
