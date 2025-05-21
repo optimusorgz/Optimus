@@ -8,9 +8,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styled from 'styled-components';
 import Team from './pages/Team';
-import Gallery from './pages/Gallery';
+import GalleryPage from './pages/Gallery';
 import Events from './pages/Events';
-import Home from './pages/Home'; // Import the Home component
+import Hero from './components/Hero';
+import { Highlights } from './components/Highlights';
+import Mission from './components/Mission';
+import GalleryComponent from './components/Gallery';
+import Footer from './components/Footer';
+import HomePageContent from './components/HomePageContent';
 
 function AppContent() {
   const { theme } = useTheme();
@@ -30,14 +35,14 @@ function AppContent() {
         <div className="App">
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} /> {/* Add route for Home page */}
+            <Route path="/" element={<HomePageContent />} />
             <Route path="/team" element={<Team />} />
-            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/events" element={<Events />} />
           </Routes>
         </div>
       </Router>
-      {/* Removed components rendered outside Router */}
+      {/* Removed components that are now in HomePageContent */}
     </HomePage>
   );
 }
