@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import { GlobalStyles } from './styles/GlobalStyles';
 import { useTheme } from './context/ThemeContext';
@@ -7,14 +6,15 @@ import Navbar from './components/Navbar';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styled from 'styled-components';
-import Team from './pages/Team';
-import GalleryPage from './pages/Gallery';
-import Events from './pages/Events';
 import Hero from './components/Hero';
 import { Highlights } from './components/Highlights';
 import Mission from './components/Mission';
 import GalleryComponent from './components/Gallery';
 import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Team from './pages/Team';
+import Gallery from './pages/Gallery';
+import Events from './pages/Events';
 
 function AppContent() {
   const { theme } = useTheme();
@@ -28,26 +28,24 @@ function AppContent() {
   }, []);
 
   return (
-    <div className="App" theme={theme} isDarkTheme={theme.isDarkTheme}>
+    <AppContainer theme={theme} isDarkTheme={theme.isDarkTheme}>
       <GlobalStyles theme={theme} />
-      <Router basename="/Optimus">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <Highlights />
-              <Mission />
-              <GalleryComponent />
-              <Footer />
-            </>
-          } />
-          <Route path="/team" element={<Team />} />
-          <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/events" element={<Events />} />
-        </Routes>
-      </Router>
-    </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Hero />
+            <Highlights />
+            <Mission />
+            <GalleryComponent />
+          </>
+        } />
+        <Route path="/team" element={<Team />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/events" element={<Events />} />
+      </Routes>
+
+    </AppContainer>
   );
 }
 
@@ -78,7 +76,9 @@ const AppContainer = styled.div`
 function App() {
   return (
     <ThemeProvider>
-      <AppContent />
+      <BrowserRouter basename="/Optimus">
+        <AppContent />
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
