@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const FooterWrapper = styled.footer`
   color: ${props => props.theme.text};
-  padding: 60px 0 20px;
+  padding: 60px 0 0 20px;
   transition: all 0.3s ease;
   
 
@@ -131,23 +132,23 @@ const Footer = () => {
 
         <FooterSection theme={theme}>
           <h3>Quick Links</h3>
-          <a href="/">Home</a>
-          <a href="/team">Team</a>
-          <a href="/gallery">Gallery</a>
-          <a href="/events">Events</a>
+          <Link to="/">Home</Link>
+          <Link to="/team">Team</Link>
+          <Link to="/gallery">Gallery</Link>
+          <Link to="/events">Events</Link>
         </FooterSection>
 
         <FooterSection theme={theme}>
           <h3>Contact Us</h3>
           <p>Email: optimustechclub@gmail.com</p>
           <SocialLinks theme={theme}>
-            <a href="https://instagram.com/optimus" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/optimus.orgz/" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
             <a href="https://linkedin.com/company/optimus" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
-            <a href="https://github.com/optimusclub" target="_blank" rel="noopener noreferrer">
+            <a href="https://script.google.com/macros/s/AKfycbwozfJIemTBTOZbuHJHyiv7cSqXf98k1ZHN3NtAiRpxlic_1mj6uuR4DNpInsbf5T1MHg/exec" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </SocialLinks>

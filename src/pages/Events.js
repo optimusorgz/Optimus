@@ -358,7 +358,6 @@ const Events = () => {
               ))}
           </RoadmapContainer>
         </RoadmapSection>
-        <Footer />
       </EventsContainer>
     </PageWrapper>
   );

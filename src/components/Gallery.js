@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import styled from 'styled-components';
 
 const Section = styled.section`
-  padding: 10px 70px 50px 70px;
+  padding: 0px 70px 100px 70px;
   position: relative;
   overflow: hidden;
   background: radial-gradient(

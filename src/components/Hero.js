@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 // Import AVIF images
 import backgroundShapes from '../assets/6814a15afea82ff3505d163e_shape-2-p-800.avif';
@@ -243,14 +243,14 @@ const Hero = () => {
   return (
     <HeroSection theme={theme}>
        <SocialIcons>
-        <a href="#" aria-label="Instagram">
+        <a href="https://www.instagram.com/optimus.orgz/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faInstagram} />
         </a>
-        <a href="#" aria-label="LinkedIn">
+        <a href="https://linkedin.com/company/optimus" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedinIn} />
         </a>
-        <a href="#" aria-label="Twitter">
-          <FontAwesomeIcon icon={faTwitter} />
+        <a href="https://github.com/optimusorgz" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faGithub} />
         </a>
       </SocialIcons>
       <SideText></SideText> 
@@ -264,23 +264,22 @@ const Hero = () => {
           <Title>Welcome To</Title>
           <Highlight>OPTIMUS</Highlight>
           <Description>
-            A cutting-edge Marketing template designed to
-            help visionary brands launch faster.
-          </Description>
+          A vibrant community empowering creativity, leadership, and collaboration to drive innovation and meaningful change.          </Description>
           <ButtonContainer>
-            <StyledButton 
-              to="#"
-              data-aos="zoom-in" 
+            <StyledButton as="a"
+            href="https://script.google.com/macros/s/AKfycbwozfJIemTBTOZbuHJHyiv7cSqXf98k1ZHN3NtAiRpxlic_1mj6uuR4DNpInsbf5T1MHg/exec" 
+            target="_blank"
+            data-aos="zoom-in" 
               data-aos-delay="300"
             >
               LET'S CONNECT
             </StyledButton>
             <StyledButton 
-              to="#"
+              to="/events"
               data-aos="zoom-in" 
               data-aos-delay="400"
             >
-              EXPLORE FEATURES
+              EXPLORE EVENTS
             </StyledButton>
           </ButtonContainer>
         </HeroContent>

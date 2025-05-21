@@ -208,7 +208,6 @@ const Team = () => {
             ))}
           </TeamGrid>
         </TeamSection>
-        <Footer />
       </TeamContainer>
     </PageWrapper>
   );

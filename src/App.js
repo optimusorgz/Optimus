@@ -15,6 +15,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Team from './pages/Team';
 import Gallery from './pages/Gallery';
 import Events from './pages/Events';
+import ScrollToTop from './components/ScrollToTop';
 
 function AppContent() {
   const { theme } = useTheme();
@@ -44,7 +45,7 @@ function AppContent() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/events" element={<Events />} />
       </Routes>
-
+      <Footer />
     </AppContainer>
   );
 }
@@ -77,6 +78,7 @@ function App() {
   return (
     <ThemeProvider>
       <BrowserRouter basename="/Optimus">
+        <ScrollToTop />
         <AppContent />
       </BrowserRouter>
     </ThemeProvider>

@@ -221,7 +221,7 @@ const Gallery = () => {
               </GalleryCard>
             ))}          </GalleryGrid>
         </Section>
-        <Footer />
+        
         
         {selectedImage && (
           <ImageModal onClick={handleClose}>

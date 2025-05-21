@@ -17,7 +17,7 @@ import {
 
 
 const MissionSection = styled.section`
-  padding: 100px 10% 200px 10%;
+  padding: 100px 10% 100px 10%;
   text-align: center;
   position: relative;
   overflow: hidden;
