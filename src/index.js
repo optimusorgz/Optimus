@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProvider } from './context/ThemeContext.js';
 import './styles/global.css';
-import App from './App';
+import App from './App.js';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`

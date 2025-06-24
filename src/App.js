@@ -1,21 +1,21 @@
 import React, { useEffect } from 'react';
-import { ThemeProvider } from './context/ThemeContext';
-import { GlobalStyles } from './styles/GlobalStyles';
-import { useTheme } from './context/ThemeContext';
-import Navbar from './components/Navbar';
+import { ThemeProvider } from './context/ThemeContext.js';
+import { GlobalStyles } from './styles/GlobalStyles.js';
+import { useTheme } from './context/ThemeContext.js';
+import Navbar from './components/Navbar.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styled from 'styled-components';
-import Hero from './components/Hero';
-import { Highlights } from './components/Highlights';
-import Mission from './components/Mission';
-import GalleryComponent from './components/Gallery';
-import Footer from './components/Footer';
+import Hero from './components/Hero.js';
+import { Highlights } from './components/Highlights.js';
+import Mission from './components/Mission.js';
+import GalleryComponent from './components/Gallery.js';
+import Footer from './components/Footer.js';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Team from './pages/Team';
-import Gallery from './pages/Gallery';
-import Events from './pages/Events';
-import ScrollToTop from './components/ScrollToTop';
+import Team from './pages/Team.js';
+import Gallery from './pages/Gallery.js';
+import Events from './pages/Events.js';
+import ScrollToTop from './components/ScrollToTop.js';
 
 function AppContent() {
   const { theme } = useTheme();
