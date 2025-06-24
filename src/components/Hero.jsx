@@ -15,22 +15,16 @@ const HeroSection = styled.section`
   justify-content: center;
   align-items: center;
   padding: 0;
-  color: white;
+  color: ${({ theme }) => theme.text};
   width: 100%;
   min-height: 90vh;
   box-sizing: border-box;
   overflow: hidden;
-  background: radial-gradient(
-  circle at top left,
-  rgba(255, 255, 255, 0.3) 10%,
-  rgba(255, 255, 255, 0.1) 20%,
-  rgba(12, 12, 29, 0.8) 30%,
-  rgba(12, 12, 29, 1) 60%,
-  transparent 90%
-);
-  background-color: rgba(12,12,29,255); /* Adjusted background color */
+  background: ${({ theme }) => theme.isDarkTheme ? 
+    'radial-gradient(circle at top left, rgba(255, 255, 255, 0.1) 0%, rgba(12, 12, 29, 0.95) 50%, rgba(12, 12, 29, 1) 100%)' : 
+    'radial-gradient(circle at top left, rgba(255, 255, 255, 1) 0%, rgba(240, 240, 255, 0.95) 50%, rgba(240, 240, 255, 1) 100%)'};
   background-position: center;
-  
+  transition: all 0.3s ease;
 `;
 
 const SocialIcons = styled.div`

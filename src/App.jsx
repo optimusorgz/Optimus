@@ -1,21 +1,22 @@
 import React, { useEffect } from 'react';
-import { ThemeProvider } from './context/ThemeContext';
-import { GlobalStyles } from './styles/GlobalStyles';
-import { useTheme } from './context/ThemeContext';
-import Navbar from './components/Navbar';
+import { ThemeProvider as CustomThemeProvider } from './context/ThemeContext.jsx';
+import { ThemeProvider as StyledThemeProvider } from 'styled-components';
+import { GlobalStyles } from './styles/GlobalStyles.jsx';
+import { useTheme } from './context/ThemeContext.jsx';
+import Navbar from './components/Navbar.jsx';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styled from 'styled-components';
-import Hero from './components/Hero';
-import { Highlights } from './components/Highlights';
-import Mission from './components/Mission';
-import GalleryComponent from './components/Gallery';
-import Footer from './components/Footer';
+import Hero from './components/Hero.jsx';
+import { Highlights } from './components/Highlights.jsx';
+import Mission from './components/Mission.jsx';
+import GalleryComponent from './components/Gallery.jsx';
+import Footer from './components/Footer.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Team from './pages/Team';
-import Gallery from './pages/Gallery';
-import Events from './pages/Events';
-import ScrollToTop from './components/ScrollToTop';
+import Team from './pages/Team.jsx';
+import Gallery from './pages/Gallery.jsx';
+import Events from './pages/Events.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 function AppContent() {
   const { theme } = useTheme();
@@ -52,37 +53,34 @@ function AppContent() {
 
 const AppContainer = styled.div`
   min-height: 100vh;
-  background: ${({ theme }) => theme.background};
-  overflow: hidden;
-  transition: all 0.3s ease;
+  width: 100%;
+  overflow-x: hidden;
   position: relative;
-
-  &::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: ${({ isDarkTheme }) =>
-      isDarkTheme
-        ? 'linear-gradient(120deg, rgba(0, 27, 47, 0.95), rgba(56, 0, 61, 0.95))'
-        : 'linear-gradient(120deg, rgba(255, 255, 255, 0.95), rgba(240, 240, 255, 0.95))'};
-    z-index: -1;
-    transition: all 0.3s ease;
-  }
+  background: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.text};
+  transition: all 0.3s ease;
 `;
 
 
 function App() {
   return (
-    <ThemeProvider>
-      <BrowserRouter basename="/Optimus">
-        <ScrollToTop />
-        <AppContent />
-      </BrowserRouter>
-    </ThemeProvider>
+    <CustomThemeProvider>
+      <AppWrapper />
+    </CustomThemeProvider>
   );
 }
 
-export default App; 
+function AppWrapper() {
+  const { theme } = useTheme();
+  return (
+    <StyledThemeProvider theme={theme}>
+      <BrowserRouter>
+        <GlobalStyles />
+        <ScrollToTop />
+        <AppContent />
+      </BrowserRouter>
+    </StyledThemeProvider>
+  );
+}
+
+export default App;

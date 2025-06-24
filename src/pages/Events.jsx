@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { useTheme } from '../context/ThemeContext';
-import { PageWrapper, ContentContainer, Section, Header } from '../components/common/PageWrapper';
-import Footer from '../components/Footer';
+import { useTheme } from '../context/ThemeContext.jsx';
+import { PageWrapper, ContentContainer, Section, Header } from '../components/common/PageWrapper.jsx';
+import Footer from '../components/Footer.jsx';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

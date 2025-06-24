@@ -2,19 +2,28 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
   }
 
   body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(120deg, #001b2f, #38003d, #001b2f, #37003c, #001b2f, #37003c);
-    background-size: 300% 300%;
-    animation: gradientFlowDark 12s ease infinite;
-    margin: 0;
+    background-color: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.text};
+    line-height: 1.6;
     min-height: 100vh;
-    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   @keyframes gradientFlowDark {
