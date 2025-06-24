@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Arial', sans-serif;
-    background-color: ${({ theme }) => theme.background};
+    /* background-color: ${({ theme }) => theme.background}; */
     color: ${({ theme }) => theme.text};
     line-height: 1.6;
     min-height: 100vh;

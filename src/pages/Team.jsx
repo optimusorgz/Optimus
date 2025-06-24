@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useTheme } from '../context/ThemeContext.jsx';
-import { PageWrapper, ContentContainer, Section, Header } from '../components/common/PageWrapper.jsx';
-import Footer from '../components/Footer.jsx';
+import { PageWrapper, Header } from '../components/common/PageWrapper.jsx';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
