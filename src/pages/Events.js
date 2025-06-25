@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { useTheme } from '../context/ThemeContext.jsx';
-import { PageWrapper, ContentContainer, Section, Header } from '../components/common/PageWrapper.jsx';
-import Footer from '../components/Footer.jsx';
+import { useTheme } from '../context/ThemeContext.js';
+import { PageWrapper, Header } from '../components/common/PageWrapper.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -15,29 +14,8 @@ const EventsContainer = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-const RoadmapHeader = styled.div`
-  text-align: center;
-  margin-bottom: 60px;
-  
-  h2 {
-    color: rgba(255, 255, 255, 1.6); /* Adjusted color to be lighter */
-    font-size: 2.5rem;
-    position: relative;
-    display: inline-block;
-    
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
-      background: rgba(255, 255, 255, 1.6); /* Adjusted color to be lighter */
-      border-radius: 2px;
-    }
-  }
-`;
+
+
 
 const RoadmapSection = styled.section`
   padding: 100px 0;
@@ -183,50 +161,8 @@ const PhaseCard = styled.div`
   }
 `;
 
-const EventGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
-  padding: 20px;
-`;
 
-const EventCard = styled.div`
-  background: ${props => props.theme.cardBackground};
-  border: 1px solid ${props => props.theme.cardBorder};
-  border-radius: 15px;
-  overflow: hidden;
-  transition: all 0.3s ease;
 
-  img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .content {
-    padding: 20px;
-
-    h3 {
-      color: rgba(255, 255, 255, 1.6); /* Adjusted color to be lighter */
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: rgba(255, 255, 255, 1.6); /* Adjusted color to be lighter */
-      margin-bottom: 15px;
-    }
-
-    .date {
-      color: rgba(255, 255, 255, 1.6); /* Adjusted color to be lighter */
-      font-size: 0.9rem;
-    }
-  }
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: ${props => props.theme.shadow};
-  }
-`;
 
 const Events = () => {
   const { theme } = useTheme();

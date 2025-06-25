@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { useTheme } from '../context/ThemeContext.jsx';
-import { PageWrapper, Header } from '../components/common/PageWrapper.jsx';
+import { useTheme } from '../context/ThemeContext.js';
+import { PageWrapper, Header } from '../components/common/PageWrapper.js';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';

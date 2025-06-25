@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 import { GlobalStyles } from './styles/GlobalStyles';
-import { useTheme } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -19,7 +18,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function AppContent() {
   const { theme } = useTheme();
-  
+
   useEffect(() => {
     AOS.init({
       duration: 1000,

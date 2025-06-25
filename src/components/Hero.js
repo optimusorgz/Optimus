@@ -217,20 +217,6 @@ const ShapesContainer = styled.div`
 `;
 
 
-const Shape = styled.img`
-  position: absolute;
-  right: -15%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 120%;
-  height: auto;
-  object-fit: contain;
-  z-index: 1; /* Keep this for the backgroundShapes image if needed 
-  filter: drop-shadow(0 0 20px rgb(0, 0, 0));
-  mix-blend-mode: normal;
-`;
-
-
 const Hero = () => {
   const { theme, isDarkTheme } = useTheme();
 
