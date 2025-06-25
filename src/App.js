@@ -17,6 +17,8 @@ import Gallery from './pages/Gallery';
 import Events from './pages/Events';
 import ScrollToTop from './components/ScrollToTop';
 
+console.log('Triggering Vercel redeploy');
+
 function AppContent() {
   const { theme } = useTheme();
   
