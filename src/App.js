@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { ThemeProvider, useTheme } from './context/ThemeContext';
+import { ThemeProvider } from './context/ThemeContext';
 import { GlobalStyles } from './styles/GlobalStyles';
+import { useTheme } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -8,7 +9,7 @@ import styled from 'styled-components';
 import Hero from './components/Hero';
 import { Highlights } from './components/Highlights';
 import Mission from './components/Mission';
-import GalleryComponent from './components/Gallery';
+import GalleryDisplay from './components/Gallery';
 import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Team from './pages/Team';
@@ -18,7 +19,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function AppContent() {
   const { theme } = useTheme();
-
+  
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -37,7 +38,7 @@ function AppContent() {
             <Hero />
             <Highlights />
             <Mission />
-            <GalleryComponent />
+            <GalleryDisplay />
           </>
         } />
         <Route path="/team" element={<Team />} />
