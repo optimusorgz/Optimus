@@ -2,7 +2,6 @@
   "name": "optimus_react_new",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://optimusorgz.github.io/Optimus",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
